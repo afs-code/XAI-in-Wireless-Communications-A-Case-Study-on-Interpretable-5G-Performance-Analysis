@@ -1,0 +1,30 @@
+function [nets, numerNets] = netInt(numNodes, numLayers, numInput, numOutput, numNetworks, allIdx, activeIdx)
+
+    nets = struct;
+    nets.("interactionSwitcher") = struct
+
+    for i = 1:numNetworks
+        nets.("subnet" + i) = struct;
+        nets.("subnet" + i) = subnet(numNodes, numLayers, numInput, numOutput);
+        if ismember(allIdx(i,:),activeIdx) 
+            nets.("interactionSwitcher").i = dlarray(1);
+        else
+            nets.("interactionSwitcher").i = dlarray(0);
+        end
+    end
+    
+    nets.("outputLayer") = struct;
+    sz = [1, numNetworks];
+    nets.("outputLayer").Weights = initializeGlorot(sz, 1, numNetworks);
+    nets.("outputLayer").Bias = initializeZeros([1 1]);
+
+    
+    
+    for ii = 1:numNetworks
+        numerNets.("numerNet" + ii).subnetMean = 0;
+        numerNets.("numerNet" + ii).subnetNorm = 0;
+        numerNets.("numerNet" + ii).movingMean = 0;
+        numerNets.("numerNet" + ii).movingNorm = 0;
+    end
+
+end
