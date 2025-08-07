@@ -1,16 +1,5 @@
 # XAI-in-Wireless-Communications-A-Case-Study-on-Interpretable-5G-Performance-Analysis
 
-<<<<<<< HEAD
-Matlab implementation of the following paper:
-
-XXX
-
-The source code for the paper will be published soon.
-
-We kindly ask that to cite the above mentioned paper if you use methods and publish work papers that was performed using these codes.
-
-Before utilizing the code, ensure that the corresponding "lib" files for files are added to your MATLAB path.
-=======
 MATLAB implementation of the following paper:
 
 A. F. Şahin, Y. Güven, S. Tedik Başaran, and T. Kumbasar, "XAI in Wireless Communications: A Case Study on Interpretable 5G Performance Analysis," 2025 IEEE 36th International Symposium on Personal, Indoor and Mobile Radio Communications (PIMRC), Istanbul, Turkey, 2025, pp. 1-6.
@@ -62,4 +51,3 @@ To analyze with static samples, load `Datasets/staticData.mat` or `Datasets/stat
   address   = {Istanbul, Turkey},
   pages     = {1--6}
 }
->>>>>>> a234011 (Initial local commit)
